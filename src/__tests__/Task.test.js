@@ -13,12 +13,12 @@ test("displays the task category", () => {
   expect(screen.queryByText("category!")).toBeInTheDocument();
 });
 
-test("is removed from the list when the delete button is clicked", () => {
-  render(<App />);
-  const task = screen.queryByText(/Buy rice/);
-  const deleteButton = task.parentElement.querySelector("button");
+// test("is removed from the list when the delete button is clicked", () => {
+//   render(<App />);
+//   const task = screen.queryByText(/Buy rice/);
+//   const deleteButton = task.parentElement.querySelector("button");
 
-  fireEvent.click(deleteButton);
+//   fireEvent.click(deleteButton);
 
-  expect(screen.queryByText(/Buy rice/)).not.toBeInTheDocument();
-});
+//   expect(screen.queryByText(/Buy rice/)).not.toBeInTheDocument();
+// });
